@@ -1,0 +1,8 @@
+<input type="text" placeholder="Search for a book" #searchInput>
+<button class="searchBtn" (click)="getBooks(searchInput.value)">Search</button>
+
+
+<ul *ngFor="let x of data">
+	<li><h3><a href="{{ x.volumeInfo.selfLink }}">{{ x.volumeInfo.title }}</a></h3></li>
+	<li>{{ x.volumeInfo.subtitle }}</li>
+</ul>
